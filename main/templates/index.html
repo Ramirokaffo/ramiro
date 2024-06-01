@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load myfilter %}
+{% block content %}
+{% block meta %}
+
+<meta property="og:title" content="{{ title }}" />
+<meta name="description"
+    content="Site de coaching et de développement personnel. On vous accompagne dans l'atteinte de vos objectifs à travers des programmes de coaching personnalisés" />
+<meta property="og:image"
+    content="{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo_site_vie_reussie.jpeg' %}" />
+<meta property="og:image:secure_url"
+    content="{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo_site_vie_reussie.jpeg' %}" />
+<meta property="og:image:alt" content="Le logo du site" />
+
+{% endblock meta %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script src="{% static 'js/script.js' %}"></script>
+
+<div>
+    <H1>La page d'accueil</H1>
+</div>
+{% endblock %}
